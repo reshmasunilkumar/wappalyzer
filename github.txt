@@ -1,0 +1,31 @@
+package pkg;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Wappalyzer {
+
+	public static void main(String[] args) {
+		 
+
+			
+				EdgeDriver driver=new EdgeDriver();
+				driver.get("https;//www.wappalyzer.com");
+				WebElement technology=driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[1]/header/div/div/div/div[2]/button[2]/span/span/svg/path"));
+				Select s=new Select(technology);
+				s.selectByVisibleText("1");
+				driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[2]/div/div[1]/div")).click();
+				driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[2]/div/div[2]/div[1]/div[1]")).click();
+				driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[1]/div[2]/div[3]/div/div/a")).click();
+				driver.navigate().back();
+				driver.findElement(By.xpath("//*[@id=\\\"app\\\"]/div/main/div/div[2]/div[2]/div/div[1]/div"));
+				driver.findElement(By.xpath("//*[@id=\"input-590\"]")).sendKeys("java");
+				
+
+				}
+
+
+	}
